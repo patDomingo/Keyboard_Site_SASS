@@ -1,0 +1,99 @@
+.home{
+    background: radial-gradient(#525252,#131313);
+}
+
+.nav-container{
+    background: rgb(7, 7, 7);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+nav{
+    width: 80%;
+    margin: auto;
+    min-height: 10vh;
+    padding: 3rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+        list-style: none;
+    }
+    #Logo{
+        flex: 3;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            top: 3rem;
+            left: 1rem;
+            width: 7rem;
+            height: 7rem;
+            background: orangered;
+            border-radius: 7%;
+            transform: translate(-10%, -33%);
+            mix-blend-mode: screen;
+            z-index: -1;
+            
+        }
+
+        img{
+            position: relative;
+            width: 15rem;
+            height: auto;
+            border-radius: 100%;
+            overflow: hidden;
+            //margin-top: -17px;
+            //margin-left: -35px;
+            margin: 0% 0% 0% -4%;//top right bottom left
+        }
+
+       
+    }
+
+    .order{
+        background: orangered;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+    }
+}
+
+.showcase{
+    display: grid;
+    min-height: 90vh;
+    grid-template-columns: 10% repeat(3,minmax(5rem,1fr)) 10%;
+    grid-template-rows: 1fr 2fr 1fr;
+
+    img{
+        grid-row: 2/3;
+        grid-column: 3/4;
+        height: 290%;
+        object-fit: cover;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .itemName{
+            grid-column: 2/3;
+            align-self: flex-end;
+    }
+
+    .info{
+        grid-row: 3/4;
+        grid-column: 4/5;
+
+        h3{
+            padding: 2rem;
+        }
+
+        p{
+            padding-left: 2rem;
+        }
+    }
+}
+
